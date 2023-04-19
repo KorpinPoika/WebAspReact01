@@ -8,6 +8,7 @@ function TSButton() {
     BtnHandler();
 }
 
+/*
 class Student {
     fullName: string;
     constructor(public firstName: string, public middleInitial: string, public lastName: string) {
@@ -25,3 +26,6 @@ function greeter(person: Person) {
 }
 
 let user = new Student("Fred", "M.", "Smith");
+*/
+
+export default TSButton;

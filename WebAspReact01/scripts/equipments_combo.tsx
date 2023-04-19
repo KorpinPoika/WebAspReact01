@@ -7,7 +7,7 @@ const Equipments: React.FC = () => {
 
     return (
         <div>
-            This is Minimg equipment place
+            This is Mining equipments place
         </div>
     );
 }
