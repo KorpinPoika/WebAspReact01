@@ -1,25 +1,23 @@
 {
-    "compilerOptions": {
-        "lib": [ "dom", "dom.iterable", "esnext" ],
-        "allowSyntheticDefaultImports": true,
-        "noFallthroughCasesInSwitch": true,
-        "noUnusedParameters": true,
-        "noImplicitReturns": true,
-        "moduleResolution": "node",
-        "esModuleInterop": true,
-        "noUnusedLocals": true,
-        "noImplicitAny": true,
-        "target": "ESNext",
-        "module": "ESNext",
-        "strict": true,
-        "forceConsistentCasingInFileNames": true,
-        "jsx": "react",
-        "baseUrl": ".",
-        "outDir": "wwwroot/js",
-        "paths": {
-            "testUtils": [ "src/utils/testUtils" ]
-        }
-    },
-    "include": [ "scripts/**/*" ],
-    "exclude": [ "node_modules", "dist" ]
+  "typeAcquisition": {
+    "enable": true
+  },
+  "compileOnSave": false,
+  "compilerOptions": {
+    "sourceMap": true,
+    "module": "commonjs",
+    "target": "ES2015",
+    "noImplicitAny": false,
+    "jsx": "react",
+    "outDir": "wwwroot/dist",
+    "moduleResolution": "node"
+  },
+  "include": [
+    "ClientApp/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "wwwroot"
+  ]
 }
+

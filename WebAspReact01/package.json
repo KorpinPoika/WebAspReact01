@@ -1,9 +1,29 @@
 {
+  "scripts": {
+    "webpack": "webpack"
+  },
+  "name": "webaspreact01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "@types/react": "^18.0.37",
-    "@types/react-dom": "^18.0.11"
+    "@types/react": "^16.4.6",
+    "@types/react-dom": "^16.4.6",
+    "@types/webpack-env": "^1.13.6",
+    "aspnet-webpack": "^3.0.0",
+    "awesome-typescript-loader": "^5.2.0",
+    "babel-core": "^6.26.3",
+    "bootstrap": "4.3.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "typescript": "^2.9.2",
+    "webpack": "^5.80.0",
+    "webpack-cli": "^5.0.2"
   },
   "dependencies": {
-    "react-dom": "^18.2.0"
+    "react": "^16.4.6",
+    "react-dom": "^16.4.6"
   }
 }

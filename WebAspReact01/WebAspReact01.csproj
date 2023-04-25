@@ -12,6 +12,19 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Yarn.MSBuild" Version="1.22.19" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\dist\" />
+  </ItemGroup>
+
+  <Target Name="YarnInstall" BeforeTargets="Build">
+    <Yarn Command="install" Condition=" ! Exists('node_modules/')" />
+  </Target>
+
+  <Target Name="MakeBundleByWebpack" BeforeTargets="Build">
+    <Yarn Command="run webpack" />
+  </Target>
 
 </Project>
