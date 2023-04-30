@@ -17,7 +17,7 @@
     <Folder Include="wwwroot\dist\" />
   </ItemGroup>
 
-  <Target Name="YarnInstall" BeforeTargets="Build">
+  <Target Name="YarnInstall" BeforeTargets="YarnBuild">
     <Yarn Command="install" Condition=" ! Exists('node_modules/')" />
   </Target>
 
