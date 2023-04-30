@@ -5,25 +5,30 @@
   "name": "webaspreact01",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "App.js",
   "keywords": [],
-  "author": "",
+  "author": "AG",
   "license": "ISC",
   "devDependencies": {
-    "@types/react": "^16.4.6",
-    "@types/react-dom": "^16.4.6",
+    "@types/jest": "^29.5.1",
+    "@types/node": "^18.16.3",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.1",
     "@types/webpack-env": "^1.13.6",
     "aspnet-webpack": "^3.0.0",
-    "awesome-typescript-loader": "^5.2.0",
+    "ts-loader": "^9.4.2",
     "babel-core": "^6.26.3",
     "bootstrap": "4.3.1",
     "clean-webpack-plugin": "^0.1.19",
-    "typescript": "^2.9.2",
-    "webpack": "^5.80.0",
-    "webpack-cli": "^5.0.2"
+    "html-webpack-plugin": "^4.5.2",
+    "typescript": "^5.0.4",
+    "webpack": "^5.81.0",
+    "webpack-cli": "^5.0.2",
+    "webpack-log": "^3.0.2"
   },
   "dependencies": {
-    "react": "^16.4.6",
-    "react-dom": "^16.4.6"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "yarn-deduplicate": "^6.0.1"
   }
 }

@@ -4,13 +4,11 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <YarnBuildCommand>run webpack</YarnBuildCommand>
+    <YarnBuildCommand Condition="'$(Configuration)' == 'Release'">run webpack --env.prod</YarnBuildCommand>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="5.0.4">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageReference Include="Yarn.MSBuild" Version="1.22.19" />
   </ItemGroup>
@@ -21,10 +19,6 @@
 
   <Target Name="YarnInstall" BeforeTargets="Build">
     <Yarn Command="install" Condition=" ! Exists('node_modules/')" />
-  </Target>
-
-  <Target Name="MakeBundleByWebpack" BeforeTargets="Build">
-    <Yarn Command="run webpack" />
   </Target>
 
 </Project>

@@ -1,6 +1,7 @@
 ﻿const path = require('path');
-const CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin;
+//const CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin;
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+//const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var APP_DIR = path.resolve(__dirname, './ClientApp');
 
@@ -27,7 +28,7 @@ module.exports = (env) => {
         },
 
         output: {
-            filename: "dist/[name].js",
+            filename: "dist/[name].bundle.js",
             path: path.join(outputDir, 'wwwroot'),
             publicPath: '/'
         },
@@ -43,13 +44,17 @@ module.exports = (env) => {
                 {
                     test: /\.tsx?$/,
                     include: APP_DIR,
-                    loader: 'awesome-typescript-loader'                    
+                    use: 'ts-loader'                    
                 }
             ]
         },
         plugins: [
             new CleanWebpackPlugin(path.join(outputDir, 'wwwroot', 'dist')),
-            new CheckerPlugin()
+        //    new HtmlWebpackPlugin({
+        //        inject: false,
+        //        template: 'Views/Shared/_Layout.Template.cshtml',
+        //        filename: '../../Views/Shared/_Layout.cshtml'
+        //    })
         ]
     }];
 };
