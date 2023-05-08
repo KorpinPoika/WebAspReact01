@@ -1,0 +1,47 @@
+﻿@model WebAspReact01.Models.EqipmentSelectorViewModel
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<h1>View</h1>
+
+<h4>EqipmentSelectorViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SelectedEqipmentResult" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MineId" class="control-label"></label>
+                @Html.DropDownListFor(x => x.MineId, ViewBag.MinesList as SelectList)
+                <span asp-validation-for="MineId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="EquipmentId" class="control-label"></label>
+                @Html.DropDownListFor(x => x.EquipmentId, ViewBag.EquipmentsList as SelectList)
+                <span asp-validation-for="EquipmentId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Submit it!" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@if (!string.IsNullOrEmpty(Model.SelectedEqipmentName)) {
+    <div>
+        <hr>
+        <p>Selected eqipment: @Model.SelectedEqipmentName</p>
+    </div>
+}
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

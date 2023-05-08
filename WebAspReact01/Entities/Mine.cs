@@ -1,6 +1,6 @@
 ﻿namespace WebAspReact01.Entities
 {
-    public sealed class PitsEquipment {
+    public sealed class Mine {
         public int Id { get; set; }
         public string Name { get; set; } = "";
     }
