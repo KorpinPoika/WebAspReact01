@@ -4,6 +4,6 @@ namespace WebAspReact01.Services
 {
     public interface IDictionaryService
     {
-        IEnumerable<MiningEquipment> GetMiningEquipments();
+        IEnumerable<PitsEquipment> GetPitsEquipments(int mineId);
     }
 }

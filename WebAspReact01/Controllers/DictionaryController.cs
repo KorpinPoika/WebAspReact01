@@ -6,7 +6,7 @@ namespace WebAspReact01.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DictionaryController : ControllerBase
+    public sealed class DictionaryController : ControllerBase
     {
         private readonly ILogger<DictionaryController> _logger;
         private readonly IDictionaryService _dictionaryService;
@@ -18,12 +18,12 @@ namespace WebAspReact01.Controllers
         }
         
         [HttpGet("MiningEquipDict")]
-        public async Task<ActionResult<IEnumerable<MiningEquipment>>> GetMiningEquipmentsAsync() 
+        public async Task<ActionResult<IEnumerable<PitsEquipment>>> GetPitsEquipmentsAsync(int mineId) 
         {
             try
             {
                 var result = await Task.FromResult(
-                    _dictionaryService.GetMiningEquipments()    
+                    _dictionaryService.GetPitsEquipments(mineId)    
                 );
 
                 return Ok(result);
