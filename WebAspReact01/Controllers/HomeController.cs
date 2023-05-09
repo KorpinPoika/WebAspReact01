@@ -41,7 +41,7 @@ namespace WebAspReact01.Controllers
         }
 
         [HttpPost]
-        public IActionResult SelectedEqipmentResult(EqipmentSelectorViewModel model) {
+        public IActionResult SelectedEquipmentResult(EqipmentSelectorViewModel model) {
 
             ViewBag.MinesList = new SelectList(
                 _dictionaryService.GetMines(), "Id", "Name", model.MineId ?? 1
